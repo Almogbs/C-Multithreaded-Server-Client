@@ -233,7 +233,10 @@ int main(int argc, char *argv[])
                 
                 // Random Overloadnig Method - Drop half of the requests in the server (on waiting)
                 case RANDOM:
-                    num_to_drop = MIN(curr_wait_queue_size, CIEL((double)(curr_wait_queue_size+curr_thrd_queue_size)/2));
+                	// opt1
+                    // num_to_drop = MIN(curr_wait_queue_size, CIEL((double)(curr_wait_queue_size+curr_thrd_queue_size)/2));
+                	// opt2
+                	num_to_drop = CIEL((double)(curr_wait_queue_size)/2);
                     while(num_to_drop > 0)
                     {
                         del = queueFront(wait_queue);
