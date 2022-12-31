@@ -10,10 +10,10 @@
     make
     
 ### Usage Example :
-    /** Therminal #1 - Server **/
+    /** Terminal #1 - Server **/
     ./server 5003 8 16 dt
     
-    /** Therminal #2 - Client **/
+    /** Terminal #2 - Client **/
     ./client localhost 5003 home.html
     
     /** Or open Browser and type localhost:5003/home.html **/
